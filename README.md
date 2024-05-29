@@ -1,1 +1,1 @@
-# CopyCookiesExtension
+# VtexClientCookieCopyExtension
