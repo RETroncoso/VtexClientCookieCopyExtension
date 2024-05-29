@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Vtex ClientID Cookie Transfer",
+  "version": "1.0",
+  "description": "Extensión para copiar cookies desde myvtex al entorno local",
+  "host_permissions": [
+    "https://*.myvtex.com/",
+		"http://*.vtexlocal.com.br/*"
+  ],
+  "permissions": [
+    "activeTab",
+		"tabs",
+    "cookies",
+		"host_permissions"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/galleta16.png",
+      "48": "images/galleta48.png"
+    }
+  },
+  "icons": {
+    "16": "images/galleta16.png",
+    "48": "images/galleta48.png"
+  }
+}
