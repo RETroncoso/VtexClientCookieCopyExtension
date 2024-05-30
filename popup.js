@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			cookieValue,
 			redirectUrl,
 		} = await getCookie(vendor, "VtexIdclientAutCookie");
+		console.log(cookieName, cookieValue, redirectUrl);
 
     if (!cookieValue) {
       copyButton.classList.remove("loading");
@@ -61,10 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const getCookie = async (vendor, name) => {
   const cookie = await chrome.cookies.get({ name, url: `https://${vendor}.myvtex.com` });
-  if (!cookie) return;
   return {
-    cookieName: cookie.name,
-    cookieValue: cookie.value,
+    cookieName: cookie?.name || '',
+    cookieValue: cookie?.value || '',
     redirectUrl: `http://${vendor}.vtexlocal.com.br`,
   };
 };
